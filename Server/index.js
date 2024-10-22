@@ -1,19 +1,26 @@
+const dotenv = require('dotenv');
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const TodoModel = require('./Models/Todo'); // Ensure the correct path to your Todo model
+
+dotenv.config()
+
+//connect to the database
+mongoose.connect(process.env.MONGODB_URI)
+
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
 // MongoDB Connection: Replace <db_password> with your actual password
-mongoose.connect('mongodb+srv://brabba:Rabi@2020@sei.njgvx.mongodb.net/test', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
-  .then(() => console.log('Connected to MongoDB'))
-  .catch((err) => console.log('Error connecting to MongoDB:', err));
+// mongoose.connect('mongodb+srv://brabba:Rabi@2020@sei.njgvx.mongodb.net/test', {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// })
+//   .then(() => console.log('Connected to MongoDB'))
+//   .catch((err) => console.log('Error connecting to MongoDB:', err));
 
 // Get all todos
 app.get('/get', (req, res) => {
