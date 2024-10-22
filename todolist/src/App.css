@@ -1,0 +1,60 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.create_form {
+  margin-bottom: 20px;
+}
+
+.create_form input {
+  width: 300px;
+  padding: 10px;
+  border-bottom: 2px solid black;
+  outline: none;
+  margin-right: 10px; /* Added margin for better spacing */
+}
+
+.create_form button {
+  padding: 10px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border: none; /* Remove default border for buttons */
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 345px;
+  background-color: black;
+  color: white;
+  height: 35px;
+  padding: 5px;
+  margin-top: 5px; /* Increase margin for better spacing between tasks */
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.line_through {
+  text-decoration: line-through;
+}
+
+.checkbox .icon {
+  margin-right: 5px;
+  font-size: 20px; /* Adjust font size for better visibility */
+}
+
+.task div span {
+  margin-left: 5px;
+}
+
+.task div .icon {
+  font-size: 20px; /* Set icon size for trash or other icons */
+  cursor: pointer; /* Add cursor pointer for clickable icons */
+}
